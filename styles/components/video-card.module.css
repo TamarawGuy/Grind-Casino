@@ -1,0 +1,33 @@
+.cardContainer {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #2e2d2e;
+  height: 46px;
+  padding: 8px;
+}
+
+.infoContainer {
+  border-radius: 4px;
+  margin-top: -8px;
+  padding-top: 13px;
+}
+
+.infoContainer button {
+  background-color: #9147ff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.infoContainer span {
+  color: #fff;
+  font-size: 14px;
+}

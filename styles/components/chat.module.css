@@ -1,0 +1,11 @@
+.imageContainer {
+  position: absolute;
+  right: 40px;
+  top: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17.8px;
+  border-radius: 50%;
+  background-color: #424042;
+}

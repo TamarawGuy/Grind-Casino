@@ -1,0 +1,52 @@
+.footer {
+  margin-top: 24px;
+  height: 163px;
+  padding: 0 156px;
+  background-color: #2e2d2e;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 23px;
+}
+
+.imagesContainer {
+  background-color: #424042;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 25px;
+}
+
+.infoContainer p {
+  color: #fff;
+}
+
+.rightFooter {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  justify-content: center;
+}
+
+.leftLinks,
+.rightLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.leftLinks h3,
+.leftLinks p,
+.rightLinks h3,
+.rightLinks p {
+  color: #fff;
+  cursor: pointer;
+}
