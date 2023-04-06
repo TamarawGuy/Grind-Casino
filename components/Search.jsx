@@ -1,12 +1,10 @@
 "use client";
-import Link from "next/link";
+import SearchLink from "./SearchLink";
 import styles from "../styles/components/search.module.css";
 import { BiSearch } from "react-icons/bi";
-import { useState } from "react";
+import { useSelectedLayoutSegments } from "next/navigation";
 
-export default function Search({ inputPlaceholder }) {
-  const [selectedButton, setSelectedButton] = useState(0);
-
+export default function Search() {
   return (
     <section className={styles.searchContainer}>
       <div className={styles.titleContainer}>
@@ -17,30 +15,12 @@ export default function Search({ inputPlaceholder }) {
         <i className={styles.iconContainer}>
           <BiSearch size={20} color="white" />
         </i>
-        <input type="text" placeholder={inputPlaceholder} />
+        <input type="text" placeholder="Latest wins" />
       </div>
       <div className={styles.btnsContainer}>
-        <Link
-          className={selectedButton === 0 ? styles.activeButton : ""}
-          onClick={() => setSelectedButton(0)}
-          href="/videos/latest-wins"
-        >
-          Latest Wins
-        </Link>
-        <Link
-          className={selectedButton === 1 ? styles.activeButton : ""}
-          onClick={() => setSelectedButton(1)}
-          href="/videos/biggest-wins"
-        >
-          Biggest Wins
-        </Link>
-        <Link
-          className={selectedButton === 2 ? styles.activeButton : ""}
-          onClick={() => setSelectedButton(2)}
-          href="/videos/youtube-exclusives"
-        >
-          Youtube Exclusives
-        </Link>
+        <SearchLink href="/videos/latest-wins">Latest Wins</SearchLink>
+        <SearchLink href="/videos/biggest-wins">Biggest Wins</SearchLink>
+        {/* <SearchLink href="/videos/youtube-exclusives">Youtube Exclusives</SearchLink> */}
       </div>
     </section>
   );

@@ -44,7 +44,6 @@
 .btnsContainer a {
   text-decoration: none;
   color: #8e8696;
-  background-color: transparent;
   font-size: 16px;
   font-weight: 700;
   padding: 6px 8px;
@@ -53,7 +52,7 @@
   cursor: pointer;
 }
 
-.searchContainer .btnsContainer a .activeButton {
+.active {
+  color: #e1c1ff !important;
   background-color: #3d2b4f;
-  color: #e1c1ff;
 }

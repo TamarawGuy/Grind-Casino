@@ -2,15 +2,15 @@
 import styles from "../styles/components/navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+
+import NavLink from "./NavLink";
 
 export default function Navbar() {
-  const [selectedLink, setSelectedLink] = useState(-1);
   return (
     <nav className={styles.navigation}>
       <div className={styles.leftNavigation}>
         <ul>
-          <li onClick={() => setSelectedLink(-1)}>
+          <li>
             <Link href="/">
               <Image
                 src="/images/logo.png"
@@ -20,29 +20,17 @@ export default function Navbar() {
               />
             </Link>
           </li>
-          <li
-            className={selectedLink === 0 ? styles.active : ""}
-            onClick={() => setSelectedLink(0)}
-          >
-            <Link href="/">Casino Bonus</Link>
+          <li>
+            <NavLink href="/casino">Casino Bonus</NavLink>
           </li>
-          <li
-            className={selectedLink === 1 ? styles.active : ""}
-            onClick={() => setSelectedLink(1)}
-          >
-            <Link href="/videos/latest-wins">Videos</Link>
+          <li>
+            <NavLink href="/videos/latest-wins">Videos</NavLink>
           </li>
-          <li
-            className={selectedLink === 2 ? styles.active : ""}
-            onClick={() => setSelectedLink(2)}
-          >
-            <Link href="/">Stream</Link>
+          <li>
+            <NavLink href="/stream">Stream</NavLink>
           </li>
-          <li
-            className={selectedLink === 3 ? styles.active : ""}
-            onClick={() => setSelectedLink(3)}
-          >
-            <Link href="/">Tournaments</Link>
+          <li>
+            <NavLink href="/tournaments">Tournaments</NavLink>
           </li>
         </ul>
       </div>
