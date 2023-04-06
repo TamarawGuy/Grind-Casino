@@ -9,3 +9,9 @@
   border-radius: 50%;
   background-color: #424042;
 }
+
+@media only screen and (max-width: 390px) {
+  .imageContainer {
+    display: none;
+  }
+}

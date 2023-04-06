@@ -2,6 +2,7 @@
 import styles from "../styles/components/navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import NavLink from "./NavLink";
 
@@ -55,6 +56,9 @@ export default function Navbar() {
             width={30}
             height={30}
           />
+        </div>
+        <div className={styles.hamburgerContainer}>
+          <GiHamburgerMenu size={25} color="white" />
         </div>
       </div>
     </nav>

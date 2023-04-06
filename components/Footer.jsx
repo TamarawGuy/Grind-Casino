@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/components/footer.module.css";
 import Link from "next/link";
+import AdditionalFooterInfo from "./AdditionalFooterInfo";
 
 export default function Footer() {
   return (
@@ -58,8 +59,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className={styles.infoContainer}>
-          <p>18+ BeGambleAware.org</p>
-          <p>CassyBeef &copy; 2022. All rights reserved.</p>
+          <AdditionalFooterInfo />
         </div>
       </div>
 
@@ -77,6 +77,10 @@ export default function Footer() {
           <p>Terms</p>
           <p>Cookies</p>
         </div>
+      </div>
+      <div className={styles.showInfo}>
+        <hr />
+        <AdditionalFooterInfo />
       </div>
     </footer>
   );

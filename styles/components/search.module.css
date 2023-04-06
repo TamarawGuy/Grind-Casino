@@ -56,3 +56,19 @@
   color: #e1c1ff !important;
   background-color: #3d2b4f;
 }
+
+@media only screen and (max-width: 390px) {
+  .inputContainer {
+    padding-right: 16px;
+  }
+
+  .btnsContainer {
+    flex-wrap: nowrap;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

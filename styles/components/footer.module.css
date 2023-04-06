@@ -28,6 +28,14 @@
   color: #fff;
 }
 
+.showInfo {
+  display: none;
+}
+
+.showInfo p {
+  color: #fff;
+}
+
 .rightFooter {
   width: 30%;
   display: flex;
@@ -49,4 +57,43 @@
 .rightLinks p {
   color: #fff;
   cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 390px) {
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .infoContainer {
+    display: none;
+  }
+
+  .showInfo {
+    display: block;
+  }
+
+  .showInfo hr {
+    color: #424042;
+    padding: 0;
+    height: 2px;
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .leftFooter {
+    margin-top: 15px;
+  }
+
+  .rightFooter {
+    gap: 80px;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
 }

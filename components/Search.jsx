@@ -20,7 +20,9 @@ export default function Search() {
       <div className={styles.btnsContainer}>
         <SearchLink href="/videos/latest-wins">Latest Wins</SearchLink>
         <SearchLink href="/videos/biggest-wins">Biggest Wins</SearchLink>
-        {/* <SearchLink href="/videos/youtube-exclusives">Youtube Exclusives</SearchLink> */}
+        <SearchLink href="/videos/youtube-exclusives">
+          Youtube Exclusives
+        </SearchLink>
       </div>
     </section>
   );

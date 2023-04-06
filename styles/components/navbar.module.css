@@ -99,3 +99,39 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+.hamburgerContainer {
+  display: none;
+}
+
+@media only screen and (max-width: 390px) {
+  .navigation {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .leftNavigation {
+    flex: 1;
+  }
+
+  .rightNavigation {
+    flex: 2;
+    justify-content: space-between;
+  }
+
+  .leftNavigation ul li:not(:first-child) {
+    display: none;
+  }
+
+  .moneyContainer button {
+    display: none;
+  }
+
+  .profileContainer {
+    display: none;
+  }
+
+  .hamburgerContainer {
+    display: block;
+  }
+}
