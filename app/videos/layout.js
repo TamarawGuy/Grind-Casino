@@ -1,7 +1,6 @@
 import Search from "../../components/Search";
-export default function VideosLayout({ children }) {
 
-    
+export default function VideosLayout({ children }) {
   return (
     <>
       <Search />

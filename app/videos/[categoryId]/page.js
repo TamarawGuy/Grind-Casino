@@ -5,36 +5,34 @@ import getVideos from "../../../lib/getVideos";
 
 import { notFound } from "next/navigation";
 
-// export async function generateMetadata({ params }) {
-//   const words = params.categoryId.split("-");
-//   const title =
-//     words[0][0].toUpperCase() + words[0].substring(1) + " " + words[1];
+export async function generateMetadata({ params }) {
+  const words = params.categoryId.split("-");
+  const title =
+    words[0][0].toUpperCase() + words[0].substring(1) + " " + words[1];
 
-//   const staticParams = await generateStaticParams();
+  const staticParams = await generateStaticParams();
 
-//   const found = staticParams.find(
-//     (obj) => obj.categoryId === params.categoryId
-//   );
+  const found = staticParams.find(
+    (obj) => obj.categoryId === params.categoryId
+  );
 
-//   if (!found) {
-//     return { title: "404 Not Found" };
-//   }
-//   return { title };
-// }
+  if (!found) {
+    return { title: "404 Not Found" };
+  }
+  return { title };
+}
 
 export default async function CategoryPage({ params }) {
   const videosData = await getVideos();
   const videos = videosData.products;
 
-  // const staticParams = await generateStaticParams();
-  // const found = staticParams.find(
-  //   (obj) => obj.categoryId === params.categoryId
-  // );
-  // const inputPlaceholder =
-  //   words[0][0].toUpperCase() + words[0].substring(1) + " " + words[1];
-  // if (!found) {
-  //   return notFound();
-  // }
+  const staticParams = await generateStaticParams();
+  const found = staticParams.find(
+    (obj) => obj.categoryId === params.categoryId
+  );
+  if (!found) {
+    return notFound();
+  }
 
   return (
     <>
@@ -48,10 +46,10 @@ export default async function CategoryPage({ params }) {
   );
 }
 
-// export async function generateStaticParams() {
-//   return [
-//     { categoryId: "latest-wins" },
-//     { categoryId: "biggest-wins" },
-//     { categoryId: "youtube-exclusives" },
-//   ];
-// }
+export async function generateStaticParams() {
+  return [
+    { categoryId: "latest-wins" },
+    { categoryId: "biggest-wins" },
+    { categoryId: "youtube-exclusives" },
+  ];
+}
