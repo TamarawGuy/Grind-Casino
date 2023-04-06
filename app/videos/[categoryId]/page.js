@@ -1,5 +1,4 @@
 import styles from "../../../styles/pages/videos-page.module.css";
-import Search from "../../../components/Search";
 import Chat from "../../../components/Chat";
 import VideoCard from "../../../components/VideoCard";
 import getVideos from "../../../lib/getVideos";

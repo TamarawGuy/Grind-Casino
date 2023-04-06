@@ -2,9 +2,13 @@
 import SearchLink from "./SearchLink";
 import styles from "../styles/components/search.module.css";
 import { BiSearch } from "react-icons/bi";
-import { useSelectedLayoutSegments } from "next/navigation";
+import { useSelectedLayoutSegment } from "next/navigation";
+import getInputPlaceholder from "../lib/getInputPlaceholder";
 
 export default function Search() {
+  const segment = useSelectedLayoutSegment();
+  const inputPlaceholder = getInputPlaceholder(segment);
+
   return (
     <section className={styles.searchContainer}>
       <div className={styles.titleContainer}>
@@ -15,7 +19,7 @@ export default function Search() {
         <i className={styles.iconContainer}>
           <BiSearch size={20} color="white" />
         </i>
-        <input type="text" placeholder="Latest wins" />
+        <input type="text" placeholder={inputPlaceholder} />
       </div>
       <div className={styles.btnsContainer}>
         <SearchLink href="/videos/latest-wins">Latest Wins</SearchLink>
